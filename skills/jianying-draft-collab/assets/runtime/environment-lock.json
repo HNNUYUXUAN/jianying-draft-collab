@@ -1,0 +1,42 @@
+{
+  "python": {
+    "executable_sha256": "008f2525071bf829d0cac79e147623ab8349fe5d7a0824b13fcbacc415719e7a",
+    "sha256": "7b0e380ea5690cef71edbaa282e585ec08ffbece7ea8155546939adeb3377e44",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260929/cpython-3.11.16%2B20260929-x86_64-pc-windows-msvc-install_only_stripped.tar.gz",
+    "bytes": 25213285,
+    "filename": "cpython-3.11.16-20260929-windows-x64.tar.gz"
+  },
+  "python_version": "3.11.16",
+  "schema_version": 1,
+  "music_source": {
+    "prefix": "music-skill-424e7bd1e1f0a328adcd62552145d7172c47e450/skills/music-production/",
+    "commit": "424e7bd1e1f0a328adcd62552145d7172c47e450",
+    "bytes": 2882245,
+    "filename": "music-skill-424e7bd.zip",
+    "url": "https://codeload.github.com/owoevan-dev/music-skill/zip/424e7bd1e1f0a328adcd62552145d7172c47e450",
+    "sha256": "dda6b3be70058ea168b6457cf637c95daadd9ada3946682c18743f382010ca99"
+  },
+  "venv_python_sha256": "a36de12e507bf71dfc272f290a4e4831dc59185f3d0a2e2132138132a070c6bd",
+  "budget": {
+    "python_wheels_estimated_bytes": 70000000,
+    "pinned_archives_download_bytes": 915666753,
+    "cache_estimated_bytes": 2000000000,
+    "runtime_estimated_bytes": 2500000000,
+    "note": "Estimates exclude the separately installed Jianying application and user video projects",
+    "recommended_free_bytes": 6000000000
+  },
+  "uv": {
+    "executable_sha256": "81ea623608f8c17720c62efd0a380a8ead380c4d365ba6968e9d279a2319c674",
+    "sha256": "a2a8820d5eea32f08ef467ef3b7f66883a9b076d5737a2fc2fbb5f458d1bb50f",
+    "url": "https://github.com/astral-sh/uv/releases/download/0.13.6/uv-x86_64-pc-windows-msvc.zip",
+    "bytes": 15239500,
+    "filename": "uv-0.13.6.zip"
+  },
+  "ffmpeg": {
+    "sha256": "b8cdefab5f50590a076c27c2b56b0294a0e6154faded28ba1ba05ebc4f801f57",
+    "url": "https://github.com/GyanD/codexffmpeg/releases/download/8.1.2/ffmpeg-8.1.2-full_build.zip",
+    "bytes": 266085149,
+    "filename": "ffmpeg-8.1.2-full_build.zip"
+  },
+  "platform": "windows-x86_64"
+}

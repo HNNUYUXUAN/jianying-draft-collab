@@ -1,0 +1,54 @@
+name: Windows install and local media
+
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - 'README*.md'
+      - 'CHANGELOG.md'
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - 'README*.md'
+      - 'CHANGELOG.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  portable:
+    runs-on: windows-2025
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Installer behavior regression
+        shell: powershell
+        run: .\tests\install-support.ps1
+      - name: Install with stock Windows tools only
+        shell: powershell
+        run: |
+          $runtime = Join-Path $env:LOCALAPPDATA 'JC CI runtime'
+          $skill = Join-Path $env:RUNNER_TEMP 'JC skills\jianying-draft-collab'
+          $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\WindowsPowerShell\v1.0"
+          & "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -NonInteractive -File .\install.ps1 -RuntimeRoot $runtime -SkillRoot $skill -Repair
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Offline regression and package checks
+        shell: powershell
+        run: |
+          $runtime = Join-Path $env:LOCALAPPDATA 'JC CI runtime'
+          $config = Get-Content -LiteralPath "$runtime\runtime-config.json" -Raw | ConvertFrom-Json
+          $python = $config.core.python
+          if (-not [IO.Path]::IsPathRooted($python)) { $python = Join-Path $runtime $python }
+          & $python -X utf8 -m unittest discover -s "$runtime\scripts" -p 'test_*.py'
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          & $python .\tools\check_package.py --json
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Real local music and video sample
+        shell: powershell
+        run: |
+          $runtime = Join-Path $env:LOCALAPPDATA 'JC CI runtime'
+          & "$runtime\run.ps1" env smoke --local-only --output "$runtime\checks\ci-smoke"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          & "$runtime\run.ps1" env preflight --task music
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }

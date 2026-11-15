@@ -1,0 +1,13 @@
+{
+  "profiles": [
+    {
+      "version": "11.7.0.14652",
+      "files": {
+        "vebun.exe": "ea04220141e98c244afd6c2619b8affd7dbf7e423b7805ebcfac5bc4ce548ee6",
+        "lyra-cli.exe": "b6a4a2bf0a156b39ecbb0c2a13f226c4de4b8ac50c941d61a88aff1f999d8ceb",
+        "lyra_cli_client.dll": "b5970d4d8735cc6e9c89566f6e32f653712f2edd9a4b753790dda44c551e7f3c",
+        "videoeditor.dll": "737782e01257b875eedba5f67a8c955eb7ab32c5aa96b6f9bf8286903438c923"
+      }
+    }
+  ]
+}

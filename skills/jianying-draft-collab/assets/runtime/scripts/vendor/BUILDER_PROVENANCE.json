@@ -1,0 +1,9 @@
+{
+  "repo": "GuanYixuan/pyJianYingDraft",
+  "commit": "1e228479dda361e312e85f6037002346cf6dca9a",
+  "license": "Apache-2.0",
+  "files": 45,
+  "local_changes": [
+    "__init__.py: disable optional desktop-controller import; file-only integration"
+  ]
+}

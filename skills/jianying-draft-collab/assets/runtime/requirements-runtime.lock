@@ -1,0 +1,9 @@
+# Direct Python dependencies; base/transitive versions are in conda-win-64.lock.txt.
+requests==2.34.2
+python-dotenv==1.2.3
+Pillow==12.3.0
+PyYAML==6.0.3
+websockets==15.0.1
+pymediainfo==7.0.1
+numpy==2.2.6
+scipy==1.15.3

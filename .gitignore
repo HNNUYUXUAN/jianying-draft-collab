@@ -1,0 +1,15 @@
+.local/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+skills/jianying-draft-collab/assets/runtime/state/
+skills/jianying-draft-collab/assets/runtime/cache/
+skills/jianying-draft-collab/assets/runtime/envs/
+skills/jianying-draft-collab/assets/runtime/outputs/
+skills/jianying-draft-collab/assets/runtime/tools/
+skills/jianying-draft-collab/assets/runtime/data/
+skills/jianying-draft-collab/assets/runtime/config/
+skills/jianying-draft-collab/assets/runtime/runtime-config.json
+skills/jianying-draft-collab/.installation.json

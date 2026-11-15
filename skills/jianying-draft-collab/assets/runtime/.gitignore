@@ -1,0 +1,9 @@
+.env
+config/*.env
+state/
+tools/
+envs/
+outputs/
+backups/
+cache/
+*.dec.json
