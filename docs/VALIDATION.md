@@ -15,6 +15,7 @@ test. / 证据仅覆盖实际执行的环境；配置存在、安装完成和版
 | Narration-aware mix | A 12-second numerical activity fixture preserved input voice bytes. Active-window voice-minus-BGM P10/median/P90: 26.00 / 33.93 / 52.57 dB; mixed true peak −17.96 dBTP. The input is an identified synthetic tone, not human speech evidence. |
 | Native protocol | Installed Jianying Pro 11.7.0.14652: isolated create, read, add video/audio/text, text content/style, audio/video volume, segment movement, timing, blueprint, removal, encrypted read and independent copy passed. Original fixture and user project index remained unchanged. A separate real independent-copy edit verified text, volume, start/duration and bold/italic/size/color/alpha; a new process reopened 4 tracks, 4 segments and 3 local media references with a matching verification receipt. This does not certify other installations or app UI playback. |
 | Chrome images | Two bilingual concept illustrations generated through connected Chrome ChatGPT Create image, original downloads decoded at 1672 × 941; aspect-preserving WebP derivatives reviewed. Model identity is unknown. |
+| Public CI | [Windows run 43722607443](https://github.com/HNNUYUXUAN/jianying-draft-collab/actions/runs/43722607443) passed in 3m28s on code commit `69f58f0`. Stock-only PATH setup, 87 regression tests, package checks and real local music/video rendering passed. This is a hosted Windows-2025 toolchain test, not Jianying GUI or a clean Windows 11 VM. |
 | Agent Plan | Transport/cache/state regressions use mocks in this release. No new paid TTS, ASR or vision request was made for release certification. Recipients configure and verify their own account. |
 | Recipient VM | **Pending user testing**, intentionally after first publication. Use [the VM checklist](windows-vm-test.md). |
 
@@ -30,7 +31,19 @@ downloads on every network.
 
 Public preview files are copied from the actual fresh-directory smoke render.
 The GIF contains 80 actual frames from that preview; it is not an editor UI mockup.
-Public CI results are linked separately below when available.
+The original CI harness exposed a retained expected-failure exit code, missing
+FFmpeg PATH in direct test execution and Windows 8.3 path-alias comparisons.
+The harness was corrected; the same 87 tests then passed both in a local new
+runtime with minimal PATH and in the public CI run linked above.
+
+The maintained local installation and independent acceptance installation both
+passed final isolated native probe and full music/video/native smoke. Existing
+production `.env` bytes were preserved. Music and closeout preflight are ready.
+
+GitHub README presentation was checked in connected Chrome in both languages,
+light/dark modes, desktop widths of 1309–1440 CSS pixels and a 390 CSS-pixel phone
+viewport. Header images, the actual animated sample and Mermaid diagrams loaded;
+no page-level horizontal overflow was observed. Temporary emulation was reset.
 
 ## What recipients verify
 

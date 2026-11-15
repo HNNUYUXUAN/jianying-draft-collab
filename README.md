@@ -1,6 +1,8 @@
 # 剪映草稿协作
 
 [English](README.en.md) · [安装与配置](docs/INSTALL.md) · [虚拟机验收](docs/windows-vm-test.md) · [版本适配](skills/jianying-draft-collab/references/compatibility.md)
+[发行版 v0.1.0](https://github.com/HNNUYUXUAN/jianying-draft-collab/releases/tag/v0.1.0) · [Windows CI](https://github.com/HNNUYUXUAN/jianying-draft-collab/actions/runs/43722607443)
+
 
 ![实拍、原创器乐与可编辑时间线的概念插画](docs/media/hero-zh.webp)
 

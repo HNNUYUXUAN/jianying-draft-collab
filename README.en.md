@@ -1,6 +1,8 @@
 # Jianying Draft Collaboration
 
 [简体中文](README.md) · [Setup](docs/INSTALL.en.md) · [Windows VM checklist](docs/windows-vm-test.md) · [Native compatibility](skills/jianying-draft-collab/references/compatibility.md)
+[Release v0.1.0](https://github.com/HNNUYUXUAN/jianying-draft-collab/releases/tag/v0.1.0) · [Windows CI](https://github.com/HNNUYUXUAN/jianying-draft-collab/actions/runs/43722607443)
+
 
 ![Concept illustration of footage, original instruments and an editable timeline](docs/media/hero-en.webp)
 
