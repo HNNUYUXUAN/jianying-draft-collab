@@ -126,3 +126,5 @@ Assert-Test ($code -ne 0 -and ($output -join "`n") -match 'Portable uv executabl
 Assert-Test ((File-Sha $modifiedUv) -eq $before) 'Modified executable was overwritten'
 $cases.Add('repair_rejects_modified_tool_before_executing_it')
 @{status='passed';cases=$cases.ToArray();network_calls=0;registry_changes=0} | ConvertTo-Json -Depth 5
+# Expected failing child processes must not leak their exit code to CI's shell.
+exit 0
