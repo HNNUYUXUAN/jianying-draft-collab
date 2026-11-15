@@ -252,8 +252,10 @@
       ]
     },
     "scripts/test_cloud_smoke.py": {
-      "sha256": "9a9355a04f464776d7c458575d41fe65ae94e9594ec00b520411fb19904acca7",
-      "previous_sha256": []
+      "sha256": "b1bb3bc3938d9d7d664f0c3c02495bc281a9dac2e01b2ae88c5d9cd8ead20617",
+      "previous_sha256": [
+        "9a9355a04f464776d7c458575d41fe65ae94e9594ec00b520411fb19904acca7"
+      ]
     },
     "scripts/test_music.py": {
       "sha256": "e2300eb71a770ff2c4a5f0c2c74893c92a499d33b355dc6cdd01044df8db1cb5",

@@ -9,7 +9,7 @@ from volc_audio import DEFAULTS
 class CloudAcceptanceTests(unittest.TestCase):
     def test_fresh_account_check_uses_run_local_tts_cache_and_minimal_prerequisites(self):
         with tempfile.TemporaryDirectory()as d:
-            out=Path(d);cfg={**DEFAULTS,'VOLC_AGENT_API_KEY':'fixture-account'};calls=[]
+            out=Path(d).resolve();cfg={**DEFAULTS,'VOLC_AGENT_API_KEY':'fixture-account'};calls=[]
             def tts(text,path,cfg,**kw):
                 calls.append(kw['cache_root']);path.parent.mkdir(parents=True,exist_ok=True);pipeline.wav(path,48000,bytes(48000*2))
                 pipeline.write(path.with_suffix('.tts.json'),{'words':[{'text':text,'start_ms':0,'end_ms':500}],'timestamp_source':'tts_native','log_id':'fixture-live-request'})

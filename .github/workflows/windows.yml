@@ -40,6 +40,7 @@ jobs:
           $config = Get-Content -LiteralPath "$runtime\runtime-config.json" -Raw | ConvertFrom-Json
           $python = $config.core.python
           if (-not [IO.Path]::IsPathRooted($python)) { $python = Join-Path $runtime $python }
+          $env:PATH = (Join-Path $runtime 'tools\ffmpeg\bin') + ';' + $env:PATH
           & $python -X utf8 -m unittest discover -s "$runtime\scripts" -p 'test_*.py'
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
           & $python .\tools\check_package.py --json
